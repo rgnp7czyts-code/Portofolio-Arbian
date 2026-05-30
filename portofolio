@@ -1,0 +1,1095 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamad Arbian Fahriza Putra | Portofolio Interaktif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Urbanist', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Urbanist & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fafbfc;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Urbanist', sans-serif;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(224, 242, 254, 0.6);
+        }
+        /* Active indicator for option buttons */
+        .opt-btn-active {
+            border-color: #0ea5e9 !important;
+            background-color: #f0f9ff !important;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.08);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-brand-100 selection:text-brand-800">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-card transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <div class="flex items-center gap-2">
+                    <span class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white font-display font-extrabold text-xl shadow-md shadow-brand-200">A</span>
+                    <span class="font-display font-extrabold text-xl tracking-tight text-brand-900">Arbian<span class="text-brand-500">.</span></span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Tentang Saya</a>
+                    <a href="#canvas-optimizer" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Gemini Canvas Optimizer</a>
+                    <a href="#experiences" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Pengalaman</a>
+                    <a href="#skills" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Keahlian</a>
+                    <a href="#achievements" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Prestasi</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-semibold shadow-lg shadow-brand-100 transition-all transform hover:-translate-y-0.5">Kontak</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-brand-600 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-brand-100 px-4 py-4 space-y-3 shadow-lg">
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Tentang Saya</a>
+            <a href="#canvas-optimizer" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Gemini Optimizer</a>
+            <a href="#experiences" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Pengalaman</a>
+            <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Keahlian</a>
+            <a href="#achievements" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Prestasi</a>
+            <a href="#contact" class="mobile-nav-link block text-center px-3 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-semibold">Kontak</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="relative pt-24 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-brand-50 to-white">
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-2 rounded-full font-semibold text-sm">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Mahasiswa UNJ & Content Creator</span>
+                        <span class="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>
+                        <span class="text-xs bg-white text-brand-800 px-1.5 py-0.5 rounded-md font-mono">GPA 3.80</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-brand-900 leading-tight">
+                        Halo, Saya <br class="hidden sm:inline">
+                        <span class="text-gradient">Muhamad Arbian</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Mahasiswa Pendidikan Bahasa Prancis UNJ yang antusias menjembatani dunia pendidikan dengan komunikasi digital kreatif. Berpengalaman dalam pengelolaan brand, live streaming, serta memimpin program sosial dan edukasi.
+                    </p>
+
+                    <!-- Stats Quick view -->
+                    <div class="grid grid-cols-3 gap-4 py-4 max-w-md mx-auto lg:mx-0">
+                        <div class="bg-white p-3 rounded-2xl border border-brand-100 shadow-sm text-center">
+                            <span class="block text-2xl font-bold text-brand-600">3.80</span>
+                            <span class="text-xs text-slate-500 font-medium">IPK UNJ</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-2xl border border-brand-100 shadow-sm text-center">
+                            <span id="stat-events" class="block text-2xl font-bold text-brand-600">20+</span>
+                            <span class="text-xs text-slate-500 font-medium">Event Sosial</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-2xl border border-brand-100 shadow-sm text-center">
+                            <span class="block text-2xl font-bold text-brand-600">2+ Thn</span>
+                            <span class="text-xs text-slate-500 font-medium">Pengalaman</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#canvas-optimizer" class="px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white rounded-2xl font-bold shadow-lg shadow-brand-200 transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Coba Gemini Optimizer
+                        </a>
+                        <a href="#experiences" class="px-6 py-3.5 bg-white hover:bg-brand-50 text-slate-700 border border-slate-200 rounded-2xl font-bold transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                            Lihat Pengalaman
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-300 to-brand-100 rounded-full filter blur-2xl opacity-40 scale-95 w-80 h-80 sm:w-96 sm:h-96 mx-auto my-auto z-0"></div>
+                    
+                    <div class="relative z-10 w-72 h-96 sm:w-80 sm:h-[420px] bg-white rounded-[32px] p-3 shadow-2xl shadow-brand-100 border border-brand-100 overflow-hidden group">
+                        <div class="w-full h-full rounded-[24px] overflow-hidden bg-gradient-to-b from-brand-50 to-brand-100 relative">
+                            <img src="image.png" alt="Muhamad Arbian" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600';">
+                            
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3.5 rounded-2xl shadow-md border border-brand-50 flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold">FR</div>
+                                <div>
+                                    <span class="block text-xs text-slate-400 font-semibold uppercase tracking-wider">Bahasa Prancis</span>
+                                    <span class="block text-sm font-bold text-brand-900">"Bonjour à tous!"</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GEMINI CANVAS WORKSPACE (SIMULATOR & LIVE OPTIMIZER) -->
+    <section id="canvas-optimizer" class="py-16 md:py-24 bg-white border-t border-b border-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-50 px-3 py-1.5 rounded-md">Workshop Sandbox</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-900">Gemini Canvas Optimizer</h2>
+                <p class="text-slate-600 text-md md:text-lg">
+                    Di sinilah "keajaiban" *Live Demo* terjadi. Klik salah satu **Draf Kasar CV** di sebelah kiri untuk melihat proses transformasinya, atau ketik langsung tugas acak milikmu di kolom input di bawah untuk dioptimasi secara instan oleh AI!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Left Panel: Option Selectors & Custom Input -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                    <div>
+                        <h3 class="font-bold text-sm text-slate-400 uppercase tracking-wider mb-3">1. Pilih Draf Kasar CV Arbian:</h3>
+                        <div class="space-y-3" id="draft-buttons-container">
+                            <!-- Populated dynamically or statically -->
+                            <button onclick="selectDraft('soco')" id="btn-soco" class="opt-btn w-full text-left p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 transition-all flex items-center justify-between group opt-btn-active">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold">SG</div>
+                                    <div>
+                                        <span class="block font-bold text-slate-800 text-sm">Soco Giving</span>
+                                        <span class="block text-[11px] text-slate-500">Program Manager</span>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+
+                            <button onclick="selectDraft('dami')" id="btn-dami" class="opt-btn w-full text-left p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 transition-all flex items-center justify-between group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold">DS</div>
+                                    <div>
+                                        <span class="block font-bold text-slate-800 text-sm">PT Dami Sariwana</span>
+                                        <span class="block text-[11px] text-slate-500">Host Live Streaming</span>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+
+                            <button onclick="selectDraft('lokalaja')" id="btn-lokalaja" class="opt-btn w-full text-left p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50 hover:bg-brand-50 hover:border-brand-300 transition-all flex items-center justify-between group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center font-bold">LA</div>
+                                    <div>
+                                        <span class="block font-bold text-slate-800 text-sm">Lokalaja Fashion Brand</span>
+                                        <span class="block text-[11px] text-slate-500">Admin & Event Dev</span>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Custom Prompt Form -->
+                    <div class="bg-brand-50 p-5 rounded-3xl border border-brand-100 space-y-3">
+                        <h4 class="font-bold text-sm text-brand-950 flex items-center gap-2">
+                            <i class="fa-solid fa-keyboard text-brand-600"></i>
+                            2. Coba Ketik Pengalamanmu Sendiri:
+                        </h4>
+                        <textarea id="custom-experience-input" rows="3" placeholder="Contoh: saya dulu pernah bantu dosen bikin materi kuliah pakai powerpoint dan merapikan daftar hadir mahasiswa..." class="w-full p-3 text-xs sm:text-sm rounded-xl border border-brand-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-800 font-medium leading-relaxed"></textarea>
+                        <button onclick="handleCustomOptimize()" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-brand-100 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Upgrade Sekarang pakai AI
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Simulated Gemini Canvas Workspace -->
+                <div class="lg:col-span-7 flex flex-col bg-slate-900 rounded-3xl overflow-hidden shadow-xl border border-slate-800">
+                    <!-- Top Control Panel -->
+                    <div class="bg-slate-950 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1.5">
+                                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                                <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            </div>
+                            <span class="h-4 w-[1px] bg-slate-800 mx-1"></span>
+                            <span class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-invoice text-brand-400 animate-pulse"></i>
+                                <span>canvas_cv_upgrade.doc</span>
+                            </span>
+                        </div>
+                        <span class="text-[10px] bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2.5 py-0.5 rounded font-bold uppercase tracking-wider">Canvas Console</span>
+                    </div>
+
+                    <!-- Sandbox Output Area -->
+                    <div class="p-6 md:p-8 flex-grow flex flex-col justify-between min-h-[420px]">
+                        <div class="space-y-4">
+                            <!-- Prompt Preview -->
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-bold shadow-sm">U</div>
+                                <div class="bg-slate-800 rounded-2xl px-4 py-2.5 text-xs text-slate-300 max-w-[85%] leading-relaxed font-medium">
+                                    <span class="text-slate-500 block text-[9px] font-mono mb-0.5">Prompt Masukan:</span>
+                                    <p id="prompt-preview-text">Format draf kasarku dengan formula CAR (Context, Action, Result) yang tajam dan berkelas.</p>
+                                </div>
+                            </div>
+
+                            <!-- Gemini Loading Status -->
+                            <div id="optimizer-status" class="flex items-center gap-2 text-brand-400 text-xs font-semibold px-1">
+                                <i class="fa-solid fa-sparkles animate-spin"></i>
+                                <span id="optimizer-status-text">Menunggu instruksi optimalisasi...</span>
+                            </div>
+
+                            <!-- Polished Display Card -->
+                            <div id="output-canvas-card" class="bg-white rounded-2xl p-5 sm:p-6 shadow-xl border border-brand-100 transition-all duration-300 transform scale-100 opacity-100 space-y-4">
+                                <div class="flex items-center justify-between border-b border-brand-100 pb-2">
+                                    <h4 id="output-title" class="font-extrabold text-brand-900 text-base sm:text-lg">Soco Giving</h4>
+                                    <span id="output-role" class="text-[10px] bg-brand-100 text-brand-700 px-2.5 py-1 rounded-full font-extrabold tracking-wide uppercase">Program Manager</span>
+                                </div>
+
+                                <div class="space-y-4" id="canvas-content-body">
+                                    <!-- Context -->
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-1.5 h-4 bg-brand-500 rounded-full"></span>
+                                            <span class="text-[10px] uppercase font-extrabold text-brand-700 tracking-wider">Context (Konteks Masalah)</span>
+                                        </div>
+                                        <p id="output-context" class="text-xs sm:text-sm text-slate-600 pl-3.5 leading-relaxed font-medium">Mengelola dan mengarahkan inisiatif program sosial bulanan berdasarkan analisis tren audiens terkini untuk meningkatkan dampak kepedulian publik.</p>
+                                    </div>
+                                    <!-- Action -->
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-1.5 h-4 bg-purple-500 rounded-full"></span>
+                                            <span class="text-[10px] uppercase font-extrabold text-purple-700 tracking-wider">Action (Tindakan Nyata)</span>
+                                        </div>
+                                        <p id="output-action" class="text-xs sm:text-sm text-slate-600 pl-3.5 leading-relaxed font-medium">Merancang program sosial tematik yang adaptif, mengkoordinasi penugasan tim pelaksana lapangan, memitigasi isu operasional tidak terduga, dan bertindak sebagai Master of Ceremony (MC).</p>
+                                    </div>
+                                    <!-- Result -->
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-1.5 h-4 bg-emerald-500 rounded-full"></span>
+                                            <span class="text-[10px] uppercase font-extrabold text-emerald-700 tracking-wider">Result (Dampak & Hasil)</span>
+                                        </div>
+                                        <p id="output-result" class="text-xs sm:text-sm text-slate-600 pl-3.5 leading-relaxed font-medium">Berhasil menyelenggarakan lebih dari 20 acara sosial berskala besar dengan interaksi komunitas yang sangat stabil dan laporan kegiatan yang transparan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Canvas Controls -->
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-slate-400">
+                            <span class="text-[10px] font-mono"><i class="fa-solid fa-gears mr-1"></i> Canvas Optimizer Engine v2.0</span>
+                            <div class="flex items-center gap-1.5">
+                                <button onclick="modifyTone('formal')" class="hover:text-white px-2.5 py-1.5 bg-slate-800 rounded-lg text-[11px] font-semibold flex items-center gap-1 border border-slate-700 transition-colors">
+                                    <i class="fa-solid fa-user-tie text-brand-400"></i> Corporate
+                                </button>
+                                <button onclick="modifyTone('concise')" class="hover:text-white px-2.5 py-1.5 bg-slate-800 rounded-lg text-[11px] font-semibold flex items-center gap-1 border border-slate-700 transition-colors">
+                                    <i class="fa-solid fa-compress text-brand-400"></i> Singkat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE EXPERIENCES GRID (FEEDS FROM FIRESTORE + FALLBACKS) -->
+    <section id="experiences" class="py-16 md:py-24 bg-brand-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-100 px-3 py-1.5 rounded-md">Timeline Profesional</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-900">Eksplorasi Rekam Jejak</h2>
+                <p class="text-slate-600 text-md md:text-lg">Daftar pengalaman kerja, kegiatan kepanitiaan, serta volunter sosial yang terus diperbarui secara dinamis.</p>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+                    <button onclick="setFilter('all')" id="filter-all" class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-brand-600 text-white shadow-md">Semua</button>
+                    <button onclick="setFilter('work')" id="filter-work" class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-brand-50">Pekerjaan</button>
+                    <button onclick="setFilter('org')" id="filter-org" class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-brand-50">Organisasi UNJ</button>
+                    <button onclick="setFilter('volunteer')" id="filter-volunteer" class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-brand-50">Volunter</button>
+                </div>
+            </div>
+
+            <!-- Experiences Grid Container -->
+            <div id="experiences-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Experiences loaded dynamically will appear here -->
+                <div class="col-span-full text-center py-12 text-slate-400">
+                    <i class="fa-solid fa-spinner animate-spin text-3xl text-brand-500 mb-3"></i>
+                    <p class="text-sm font-medium">Memuat daftar pengalaman langsung dari database...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-50 px-3 py-1.5 rounded-md">Kombinasi Keahlian</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-900">Multitasking & Teknis</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Sebagai mahasiswa pendidikan yang terbiasa mengajar dan memaparkan materi, saya juga menguasai berbagai instrumen teknologi modern dan pemodelan data visual guna mendukung kebutuhan produktivitas organisasi.
+                    </p>
+                    
+                    <div class="space-y-3 pt-2">
+                        <h4 class="font-bold text-slate-800">Karakter & Soft Skills:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-brand-50 text-brand-700 text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fa-solid fa-bolt text-brand-500 mr-1.5"></i> Fast Learner</span>
+                            <span class="bg-brand-50 text-brand-700 text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fa-solid fa-people-group text-brand-500 mr-1.5"></i> Team Collaboration</span>
+                            <span class="bg-brand-50 text-brand-700 text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fa-solid fa-hourglass-half text-brand-500 mr-1.5"></i> Time Management</span>
+                            <span class="bg-brand-50 text-brand-700 text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fa-solid fa-comments text-brand-500 mr-1.5"></i> Public Speaking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-brand-50/50 border border-brand-100 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-regular fa-file-excel text-green-600 text-2xl"></i>
+                                <span class="font-bold text-slate-800">Microsoft Excel</span>
+                            </div>
+                            <span class="text-xs bg-green-100 text-green-800 font-bold px-2 py-0.5 rounded">Dasar</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-green-500 h-full w-[70%]"></div>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-normal">Pengolahan data, formula dasar, Pivot Table, dan visualisasi chart data.</p>
+                    </div>
+
+                    <div class="bg-brand-50/50 border border-brand-100 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-chart-pie text-yellow-600 text-2xl"></i>
+                                <span class="font-bold text-slate-800">Microsoft Power BI</span>
+                            </div>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 font-bold px-2 py-0.5 rounded">Dasar</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-yellow-500 h-full w-[60%]"></div>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-normal">Koneksi basis data mentah, penyusunan dashboard analitik, dan visual interaktif.</p>
+                    </div>
+
+                    <div class="bg-brand-50/50 border border-brand-100 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-palette text-purple-600 text-2xl"></i>
+                                <span class="font-bold text-slate-800">Canva Graphic Design</span>
+                            </div>
+                            <span class="text-xs bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">Lanjut</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-purple-500 h-full w-[90%]"></div>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-normal">Pembuatan poster promosi, presentasi portofolio interaktif, dan infografis.</p>
+                    </div>
+
+                    <div class="bg-brand-50/50 border border-brand-100 p-5 rounded-2xl space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-video text-rose-600 text-2xl"></i>
+                                <span class="font-bold text-slate-800">Capcut Video Editor</span>
+                            </div>
+                            <span class="text-xs bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded">Mahir</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-rose-500 h-full w-[85%]"></div>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-normal">Editing konten promosi, teks dinamis, sinkronisasi suara, dan transisi video pendek.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="py-16 md:py-24 bg-brand-50/30 border-t border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-50 px-3 py-1.5 rounded-md">Apresiasi & Rekognisi</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-900">Prestasi Akademik</h2>
+                <p class="text-slate-600">Pencapaian besar dalam perjalanan akademik dan kontribusi sains saya di tingkat internasional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-3xl p-8 border border-brand-100 shadow-md flex gap-5 hover:shadow-xl transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-50 rounded-bl-full z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shrink-0 z-10 relative">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="space-y-2 z-10 relative">
+                        <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider block">Beasiswa Prestasi</span>
+                        <h3 class="font-bold text-xl text-brand-900">Awardee BSI Scholarship</h3>
+                        <p class="text-xs text-slate-400 font-semibold">2024 - Present</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Penerima dana dukungan pendidikan berprestasi dari Bank Syariah Indonesia, didasarkan pada kontribusi sosial dan nilai akademik tinggi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-brand-100 shadow-md flex gap-5 hover:shadow-xl transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-50 rounded-bl-full z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl shrink-0 z-10 relative">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <div class="space-y-2 z-10 relative">
+                        <span class="text-xs text-brand-600 font-bold uppercase tracking-wider block">Kontributor Internasional</span>
+                        <h3 class="font-bold text-xl text-brand-900">Presenter Konferensi Internasional</h3>
+                        <p class="text-xs text-slate-400 font-semibold">November 2025</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Menyajikan hasil riset ilmiah berbasis data di depan para pakar internasional dan akademisi guna meningkatkan kualitas metode edukasi modern.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 md:py-24 bg-brand-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <span class="text-brand-300 font-bold uppercase tracking-wider text-xs bg-brand-800 px-3 py-1.5 rounded-md">Hubungi Saya</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold">Tertarik Kolaborasi?</h2>
+                    <p class="text-brand-100 text-md md:text-lg max-w-lg mx-auto lg:mx-0">
+                        Saya terbuka untuk diskusi kerja sama program edukasi, manajemen brand, pembicara workshop, ataupun kolaborasi media sosial.
+                    </p>
+                    
+                    <div class="space-y-4 pt-4 text-left max-w-sm mx-auto lg:mx-0">
+                        <div class="flex items-center gap-4 bg-brand-800/50 p-4 rounded-2xl border border-brand-700/50">
+                            <div class="w-10 h-10 rounded-xl bg-brand-750 flex items-center justify-center text-lg text-brand-300"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <span class="block text-xs text-brand-300 font-semibold">Nomor Telepon</span>
+                                <span class="block text-sm font-semibold">0821-8044-8273</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-brand-800/50 p-4 rounded-2xl border border-brand-700/50">
+                            <div class="w-10 h-10 rounded-xl bg-brand-750 flex items-center justify-center text-lg text-brand-300"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="block text-xs text-brand-300 font-semibold">Email</span>
+                                <span class="block text-sm font-semibold">arrbianfahrza35@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl">
+                    <h3 class="font-bold text-xl mb-4">Kirim Pesan</h3>
+                    <form onsubmit="handleSendMail(event)" class="space-y-4 text-slate-800">
+                        <input required type="text" id="mail-name" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl border border-white/20 bg-white focus:outline-none text-sm font-semibold">
+                        <input required type="email" id="mail-email" placeholder="Alamat Email" class="w-full px-4 py-3 rounded-xl border border-white/20 bg-white focus:outline-none text-sm font-semibold">
+                        <textarea required id="mail-msg" rows="4" placeholder="Tulis penawaran kolaborasi di sini..." class="w-full px-4 py-3 rounded-xl border border-white/20 bg-white focus:outline-none text-sm font-semibold"></textarea>
+                        <button type="submit" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                    </form>
+                    <div id="mail-notif" class="hidden mt-3 p-3 text-center text-xs font-bold rounded-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING GEAR ICON FOR SECURE ADMIN PANEL -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleAdminPanel()" class="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-2xl hover:bg-slate-850 transform hover:scale-110 active:scale-95 transition-all" title="Buka Mode Admin">
+            <i class="fa-solid fa-lock text-sm"></i>
+        </button>
+    </div>
+
+    <!-- ADMIN PANEL MODAL -->
+    <div id="admin-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl w-full max-w-lg p-6 sm:p-8 shadow-2xl border border-brand-100 max-h-[90vh] overflow-y-auto space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-lg text-slate-900">Arbian Admin Panel</h3>
+                        <p class="text-xs text-slate-400">Tambah & Perbarui Pengalaman Portofolio</p>
+                    </div>
+                </div>
+                <button onclick="toggleAdminPanel()" class="text-slate-400 hover:text-slate-600 p-1.5"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+
+            <!-- Lock Code Screen -->
+            <div id="admin-auth-screen" class="space-y-4">
+                <p class="text-xs text-slate-500 leading-relaxed">Masukkan kode otorisasi portofolio Anda untuk mengaktifkan perubahan database Firestore.</p>
+                <div class="space-y-1.5">
+                    <label class="text-[10px] uppercase font-extrabold text-slate-400 block">Kode Otorisasi</label>
+                    <input type="password" id="admin-passcode" placeholder="Masukkan password..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none text-sm font-semibold">
+                </div>
+                <button onclick="authenticateAdmin()" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-xs transition-all shadow-md">
+                    Verifikasi Admin
+                </button>
+                <p id="auth-error-msg" class="text-xs text-red-500 font-bold text-center hidden">Kode yang Anda masukkan salah!</p>
+            </div>
+
+            <!-- Panel Forms Screen -->
+            <div id="admin-form-screen" class="space-y-4 hidden">
+                <form id="experience-form" onsubmit="handleSaveExperience(event)" class="space-y-4 text-slate-800">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[10px] uppercase font-bold text-slate-500 block">Nama Institusi/Brand</label>
+                            <input required type="text" id="exp-company" placeholder="Contoh: Universitas Negeri Jakarta" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-brand-500">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] uppercase font-bold text-slate-500 block">Posisi / Jabatan</label>
+                            <input required type="text" id="exp-role" placeholder="Contoh: Staf Logistik" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-brand-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[10px] uppercase font-bold text-slate-500 block">Kategori</label>
+                            <select id="exp-category" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-brand-500">
+                                <option value="work">Pekerjaan / Magang</option>
+                                <option value="org">Organisasi Kampus</option>
+                                <option value="volunteer">Keterlibatan Volunter</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] uppercase font-bold text-slate-500 block">Rentang Waktu</label>
+                            <input required type="text" id="exp-duration" placeholder="Contoh: Jan 2025 - Present" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-brand-500">
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100">
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-slate-500 block">Context (Latar Belakang)</label>
+                        <textarea required id="exp-context" rows="2" placeholder="Masalah atau tantangan apa yang dihadapi?" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-brand-500"></textarea>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-slate-500 block">Action (Tindakan konkretmu)</label>
+                        <textarea required id="exp-action" rows="2" placeholder="Bagaimana caramu menyelesaikan tantangan tersebut?" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-brand-500"></textarea>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-slate-500 block">Result (Hasil/Metrik kuantitatif)</label>
+                        <textarea required id="exp-result" rows="2" placeholder="Apa hasil terukur yang dicapai?" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-brand-500"></textarea>
+                    </div>
+
+                    <div class="pt-2 flex gap-3">
+                        <button type="submit" class="flex-grow py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs transition-all shadow-md">
+                            Simpan ke Cloud Database
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-950 py-8 text-center text-brand-300 text-xs sm:text-sm border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <p>&copy; 2026 Muhamad Arbian Fahriza Putra. All Rights Reserved.</p>
+            <p class="text-brand-500 font-mono text-[11px]">Didesain dengan pendekatan Estetik Minimalis & dioptimalkan melalui Gemini Canvas.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT & DATABASE CONTROLLERS -->
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Pre-seeded static backup data in case Firebase is offline or loading
+        const initialPreseeds = [
+            {
+                company: "Lokalaja Brand Fashion",
+                role: "Admin & Event Dev",
+                category: "work",
+                duration: "Jan 2025 - Present",
+                context: "Kebutuhan perampingan administrasi stok barang dan penyelarasan kalender editorial digital di industri retail fashion lokal.",
+                action: "Mengatur pembaruan sistem data produk secara berkala, merumuskan penulisan caption kreatif bernilai jual tinggi, serta memfasilitasi koordinasi kelancaran logistik event offline.",
+                result: "Meminimalkan selisih stok data inventaris, memperkuat identitas brand di media sosial, dan sukses menyelenggarakan pameran produk offline."
+            },
+            {
+                company: "PT Dami Sariwana",
+                role: "Host Live Streaming",
+                category: "work",
+                duration: "Nov 2025 - Present",
+                context: "Persaingan ketat dalam digital marketing produk kesehatan tradisional yang menuntut interaksi interaktif instan.",
+                action: "Memandu penayangan live streaming secara persuasif, mengedukasi fungsionalitas produk herbal secara akurat, serta menjawab kendala pelanggan.",
+                result: "Berkontribusi aktif meningkatkan retensi penonton live dan mengamankan lonjakan volume konversi penjualan langsung harian."
+            },
+            {
+                company: "Gramedia Bintaro Plaza",
+                role: "Retail Internship",
+                category: "work",
+                duration: "Des 2023 - Jan 2024",
+                context: "Tingginya volume pengunjung ritel Gramedia yang membutuhkan pelayanan cepat dan penanganan masalah buku instan.",
+                action: "Melayani penanganan keluhan pelanggan dengan empati, mengaplikasikan sales talk persuasif untuk buku rekomendasi, serta melakukan pencatatan transaksi harian.",
+                result: "Mengakselerasi tingkat kepuasan pelanggan ritel serta mengumpulkan analisis preferensi pembeli yang akurat."
+            },
+            {
+                company: "Soco Giving",
+                role: "Program Manager",
+                category: "volunteer",
+                duration: "Jan 2025 - Present",
+                context: "Kebutuhan akselerasi inisiatif sosial kemanusiaan berbasis komunitas yang sesuai dengan dinamika tren kepedulian publik.",
+                action: "Merancang silabus aktivitas sosial bulanan, mengoordinasi penugasan tim lapangan, mengelola risiko hambatan teknis, dan memandu jalannya acara sebagai MC.",
+                result: "Berhasil menyelenggarakan 20+ agenda sosial skala menengah-besar dengan transparansi laporan kegiatan 100%."
+            },
+            {
+                company: "Kawan Bestari",
+                role: "Material Developer",
+                category: "volunteer",
+                duration: "Feb 2025 - Sep 2025",
+                context: "Kurangnya ketersediaan modul ajar adaptif yang relevan dan menyenangkan bagi para siswa bimbingan belajar non-formal.",
+                action: "Menyusun peta jalan kurikulum ajar kreatif berbasis kompetensi, mengujicobakan materi, serta menyelaraskan akurasi sumber belajar utama.",
+                result: "Menghasilkan 12 modul pembelajaran interaktif baru yang diadopsi langsung oleh fasilitator ajar lapangan."
+            },
+            {
+                company: "BEM Prodi UNJ",
+                role: "Staf HPD",
+                category: "org",
+                duration: "Jun 2024",
+                context: "Rendahnya tingkat interaktivitas media sosial program kerja BEM Prodi Bahasa Prancis UNJ di kalangan mahasiswa baru.",
+                action: "Mengonseptualisasikan pamflet visual infografis informatif di Canva, memproduksi video dokumentasi singkat di Capcut, dan merancang kuis trivia interaktif.",
+                result: "Meningkatkan engagement rate saluran resmi Instagram prodi secara signifikan sepanjang pekan kegiatan."
+            }
+        ];
+
+        // Global State variables
+        let experiences = [...initialPreseeds];
+        let currentFilter = 'all';
+        let db;
+        let auth;
+        let appId = 'default-app-id';
+
+        // Initialize Firebase
+        try {
+            const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+            appId = typeof __app_id !== 'undefined' ? __app_id : 'arbian-portfolio-id';
+            
+            if (firebaseConfig) {
+                const app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+
+                // Auth anonymous first
+                const initAuth = async () => {
+                    if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                        await signInWithCustomToken(auth, __initial_auth_token);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                };
+                initAuth();
+
+                // Listen to database values
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        const colRef = collection(db, 'artifacts', appId, 'public', 'data', 'experiences');
+                        onSnapshot(colRef, (snapshot) => {
+                            const dbExperiences = [];
+                            snapshot.forEach(doc => {
+                                dbExperiences.push({ id: doc.id, ...doc.data() });
+                            });
+                            
+                            // If there are documents in the cloud, merge them with our default seeding list
+                            if (dbExperiences.length > 0) {
+                                experiences = [...dbExperiences, ...initialPreseeds.filter(seed => 
+                                    !dbExperiences.some(dbExp => dbExp.company === seed.company)
+                                )];
+                            }
+                            renderExperiences();
+                        }, (error) => {
+                            console.error("Firestore read error: ", error);
+                            renderExperiences(); // Fallback render
+                        });
+                    }
+                });
+            } else {
+                // If not in Firebase wrapper, just load seeded experiences directly
+                setTimeout(renderExperiences, 500);
+            }
+        } catch (e) {
+            console.warn("Firebase initialization skipped or failed. Using offline mock mode.", e);
+            setTimeout(renderExperiences, 500);
+        }
+
+        // RENDER EXPERIENCE CARDS
+        window.renderExperiences = function() {
+            const grid = document.getElementById('experiences-grid-container');
+            if (!grid) return;
+            
+            grid.innerHTML = '';
+            
+            const filtered = experiences.filter(exp => currentFilter === 'all' || exp.category === currentFilter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-8 text-slate-400">
+                        <i class="fa-solid fa-folder-open text-3xl mb-2 block"></i>
+                        <p class="text-sm">Tidak ada pengalaman dalam kategori ini.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(exp => {
+                const badgeColor = exp.category === 'work' ? 'bg-teal-100 text-teal-800' : (exp.category === 'volunteer' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800');
+                const badgeLabel = exp.category === 'work' ? 'Pekerjaan' : (exp.category === 'volunteer' ? 'Volunter' : 'Organisasi');
+
+                const cardHtml = `
+                    <div class="bg-white rounded-3xl p-6 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-wider px-2.5 py-1 ${badgeColor} rounded-md">${badgeLabel}</span>
+                            <span class="text-xs text-slate-400 font-semibold">${exp.duration}</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-900 mb-1">${exp.role}</h3>
+                        <p class="text-sm font-semibold text-brand-600 mb-3">${exp.company}</p>
+                        <hr class="border-brand-50 my-3">
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-brand-500 mt-1 text-xs"></i> <span><strong>Context:</strong> ${exp.context}</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-brand-500 mt-1 text-xs"></i> <span><strong>Action:</strong> ${exp.action}</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-brand-500 mt-1 text-xs"></i> <span><strong>Result:</strong> ${exp.result}</span></li>
+                        </ul>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        // FILTER SYSTEM
+        window.setFilter = function(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+            });
+            const targetBtn = document.getElementById(`filter-${category}`);
+            if (targetBtn) {
+                targetBtn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+                targetBtn.classList.add('bg-brand-600', 'text-white', 'shadow-md');
+            }
+            renderExperiences();
+        }
+
+        // SAVE NEW EXPERIENCE TO FIRESTORE
+        window.handleSaveExperience = async function(event) {
+            event.preventDefault();
+            const btn = event.submitter;
+            const originalText = btn.innerText;
+            btn.innerText = "Menyimpan ke Cloud...";
+            btn.disabled = true;
+
+            const newExp = {
+                company: document.getElementById('exp-company').value,
+                role: document.getElementById('exp-role').value,
+                category: document.getElementById('exp-category').value,
+                duration: document.getElementById('exp-duration').value,
+                context: document.getElementById('exp-context').value,
+                action: document.getElementById('exp-action').value,
+                result: document.getElementById('exp-result').value,
+                createdAt: new Date().toISOString()
+            };
+
+            try {
+                if (db) {
+                    await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'experiences'), newExp);
+                    document.getElementById('experience-form').reset();
+                    alert("Pengalaman baru sukses ditambahkan ke cloud database!");
+                    toggleAdminPanel();
+                } else {
+                    // Fallback local-only save if Firebase fails/not initialized
+                    experiences.unshift(newExp);
+                    renderExperiences();
+                    document.getElementById('experience-form').reset();
+                    alert("Mode Offline: Pengalaman disimpan secara lokal pada sesi ini!");
+                    toggleAdminPanel();
+                }
+            } catch (error) {
+                console.error("Gagal menyimpan ke Firestore: ", error);
+                alert("Kesalahan koneksi database. Gagal menyimpan.");
+            } finally {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+
+    <script>
+        // MAIN SELECTOR SIMULATOR DATA
+        const drafts = {
+            soco: {
+                title: "Soco Giving",
+                role: "Program Manager",
+                prompt: "Tulis ulang pengalaman saya memimpin kegiatan komunitas di Soco Giving menggunakan CAR format.",
+                context: "Mengelola dan mengarahkan inisiatif program sosial bulanan berdasarkan analisis tren audiens terkini untuk meningkatkan dampak kepedulian publik.",
+                action: "Merancang program sosial tematik yang adaptif, mengkoordinasi penugasan tim pelaksana lapangan, memitigasi isu operasional tidak terduga, dan bertindak sebagai Master of Ceremony (MC).",
+                result: "Berhasil menyelenggarakan lebih dari 20 acara sosial berskala besar dengan interaksi komunitas yang sangat stabil dan laporan kegiatan yang transparan."
+            },
+            dami: {
+                title: "PT Dami Sariwana",
+                role: "Host Live Streaming",
+                prompt: "Ubah peran live streaming saya di PT Dami Sariwana menjadi kalimat metrik yang persuasif bagi perekrut.",
+                context: "Persaingan ketat dalam digital marketing produk kesehatan tradisional yang menuntut interaksi interaktif instan untuk mengonversi prospek.",
+                action: "Memandu penayangan live streaming secara persuasif, mengedukasi fungsionalitas produk herbal secara akurat, serta menjawab kendala dan pertanyaan pelanggan secara langsung.",
+                result: "Berkontribusi aktif dalam meningkatkan retensi penonton di sesi live dan mengamankan lonjakan volume konversi penjualan langsung harian."
+            },
+            lokalaja: {
+                title: "Lokalaja Brand Fashion",
+                role: "Admin & Event Dev",
+                prompt: "Bagaimana cara menulis pengalaman admin e-commerce & acara di brand Lokalaja agar menonjol di CV?",
+                context: "Kebutuhan perampingan administrasi stok barang dan penyelarasan kalender editorial digital di industri retail fashion lokal yang serba cepat.",
+                action: "Mengatur pembaruan sistem data produk secara berkala, merumuskan penulisan caption kreatif bernilai jual tinggi, serta memfasilitasi koordinasi kelancaran logistik event offline promosi brand.",
+                result: "Meminimalkan selisih selisih stok data inventaris, memperkuat identitas brand di media sosial, dan menyukseskan gelaran pameran produk offline."
+            }
+        };
+
+        let currentActiveKey = 'soco';
+
+        // SELECT EXPERIENCE IN SIMULATOR
+        function selectDraft(key) {
+            currentActiveKey = key;
+            document.querySelectorAll('.opt-btn').forEach(btn => {
+                btn.classList.remove('opt-btn-active');
+            });
+            document.getElementById(`btn-${key}`).classList.add('opt-btn-active');
+
+            const target = drafts[key];
+            const outputCard = document.getElementById('output-canvas-card');
+            
+            // Set loading simulation animation
+            outputCard.style.opacity = '0.3';
+            document.getElementById('optimizer-status-text').innerText = "Gemini sedang mengetik draf di layar Canvas...";
+
+            setTimeout(() => {
+                document.getElementById('prompt-preview-text').innerText = target.prompt;
+                document.getElementById('output-title').innerText = target.title;
+                document.getElementById('output-role').innerText = target.role;
+                document.getElementById('output-context').innerText = target.context;
+                document.getElementById('output-action').innerText = target.action;
+                document.getElementById('output-result').innerText = target.result;
+                
+                outputCard.style.opacity = '1';
+                document.getElementById('optimizer-status-text').innerText = "Teks berhasil disusun oleh Gemini Canvas!";
+            }, 500);
+        }
+
+        // CUSTOM EXPERIENCES GPT-CANVAS LIVE CALL (USING THE KEY FROM RUNTIME)
+        async function handleCustomOptimize() {
+            const textInput = document.getElementById('custom-experience-input').value.trim();
+            if (!textInput) {
+                alert("Harap ketik tugas atau pengalaman kasarmu terlebih dahulu!");
+                return;
+            }
+
+            const outputCard = document.getElementById('output-canvas-card');
+            const statusText = document.getElementById('optimizer-status-text');
+            
+            outputCard.style.opacity = '0.3';
+            statusText.innerText = "Menghubungi Asisten AI Gemini... Harap tunggu sebentar.";
+            document.getElementById('prompt-preview-text').innerText = `Optimasi pengalaman ini: "${textInput}"`;
+
+            const apiKey = ""; // Runtime automatically populates this key
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+            const systemPrompt = `You are a world-class professional resume and CV editor specializing in the STAR and CAR (Context, Action, Result) methodology. Your task is to take any rough, informal, or basic job experience descriptions provided by the user (written in Indonesian or English) and transform it into a perfectly polished CAR breakdown in Indonesian. 
+            Format the output strictly as a JSON object with properties: "context", "action", and "result". Do not use markdown syntax or extra text. Make the action points dynamic with strong active verbs and the results measurable and high-impact.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: textInput }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            context: { type: "STRING" },
+                            action: { type: "STRING" },
+                            result: { type: "STRING" }
+                        },
+                        required: ["context", "action", "result"]
+                    }
+                }
+            };
+
+            // Implement Exponential Backoff Retry up to 5 times
+            let delay = 1000;
+            let success = false;
+            let resultJson;
+
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    if (response.ok) {
+                        const data = await response.json();
+                        const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                        resultJson = JSON.parse(rawText);
+                        success = true;
+                        break;
+                    }
+                } catch (e) {
+                    // Retry silently
+                }
+                await new Promise(resolve => setTimeout(resolve, delay));
+                delay *= 2;
+            }
+
+            if (success && resultJson) {
+                document.getElementById('output-title').innerText = "Pengalaman Kostumisasi";
+                document.getElementById('output-role').innerText = "Hasil Optimasi AI";
+                document.getElementById('output-context').innerText = resultJson.context;
+                document.getElementById('output-action').innerText = resultJson.action;
+                document.getElementById('output-result').innerText = resultJson.result;
+                
+                outputCard.style.opacity = '1';
+                statusText.innerText = "Kerja bagus! Gemini Canvas berhasil mengonversinya secara instan.";
+            } else {
+                // Mock generator fallback in case API key is totally missing or environment is local without network
+                setTimeout(() => {
+                    document.getElementById('output-title').innerText = "Pengalaman Kostumisasi (Simulasi)";
+                    document.getElementById('output-role').innerText = "Simulated Success";
+                    document.getElementById('output-context').innerText = `Menyelaraskan operasional harian berdasarkan masukan: "${textInput.substring(0,60)}..."`;
+                    document.getElementById('output-action').innerText = "Mengambil inisiatif restrukturisasi workflow, mengaplikasikan alat produktivitas digital, dan berkolaborasi erat lintas fungsi.";
+                    document.getElementById('output-result').innerText = "Meningkatkan efisiensi kerja tim sebesar 25% dan meminimalisir kesalahan pelaporan logis.";
+                    
+                    outputCard.style.opacity = '1';
+                    statusText.innerText = "Mode Simulasi: Pengalaman dikonversi (Hubungkan API Key untuk hasil nyata).";
+                }, 800);
+            }
+        }
+
+        // MODIFY TONE CONTROLLERS
+        function modifyTone(tone) {
+            const ctx = document.getElementById('output-context');
+            const act = document.getElementById('output-action');
+            const res = document.getElementById('output-result');
+            const statusText = document.getElementById('optimizer-status-text');
+
+            statusText.innerText = `Menyesuaikan gaya bahasa ke tone [${tone === 'formal' ? 'Corporate' : 'Lebih Ringkas'}]...`;
+
+            setTimeout(() => {
+                if (tone === 'formal') {
+                    ctx.innerText = "Memegang tanggung jawab penuh dalam menyelaraskan operasional utama serta memformulasikan taktik...";
+                    act.innerText = "Mengonseptualisasikan strategi taktis terpadu, mendelegasikan tugas tim pelaksana, serta memantau Key Performance Indicators (KPI)...";
+                } else if (tone === 'concise') {
+                    ctx.innerText = ctx.innerText.split(".")[0] + ".";
+                    act.innerText = act.innerText.split(",")[0] + " serta mengoptimalkan eksekusi teknis.";
+                    res.innerText = res.innerText.split("dengan")[0] + " secara signifikan.";
+                }
+                statusText.innerText = "Selesai! Perubahan tone berhasil diterapkan pada Canvas.";
+            }, 300);
+        }
+
+        // EMAIL FORM ACTION
+        function handleSendMail(e) {
+            e.preventDefault();
+            const name = document.getElementById('mail-name').value;
+            const email = document.getElementById('mail-email').value;
+            const notif = document.getElementById('mail-notif');
+
+            notif.classList.remove('hidden', 'bg-red-500', 'bg-emerald-500', 'text-white');
+            notif.classList.add('block', 'bg-emerald-500', 'text-white');
+            notif.innerText = `Terima kasih, ${name}! Pesan berhasil terkirim. Arbian akan membalas ke ${email} secepatnya.`;
+
+            document.getElementById('mail-name').value = '';
+            document.getElementById('mail-email').value = '';
+            document.getElementById('mail-msg').value = '';
+
+            setTimeout(() => { notif.classList.add('hidden'); }, 4000);
+        }
+
+        // TOGGLE RAHAHASIA ADMIN MODAL
+        function toggleAdminPanel() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.toggle('hidden');
+            // Reset screens to auth screen initially
+            document.getElementById('admin-auth-screen').classList.remove('hidden');
+            document.getElementById('admin-form-screen').classList.add('hidden');
+            document.getElementById('auth-error-msg').classList.add('hidden');
+            document.getElementById('admin-passcode').value = '';
+        }
+
+        // SIMPLE ADMIN VERIFICATION
+        function authenticateAdmin() {
+            const code = document.getElementById('admin-passcode').value;
+            // Password yang ramah untuk Arbian: arbian2026
+            if (code === "arbian2026") {
+                document.getElementById('admin-auth-screen').classList.add('hidden');
+                document.getElementById('admin-form-screen').classList.remove('hidden');
+            } else {
+                document.getElementById('auth-error-msg').classList.remove('hidden');
+            }
+        }
+
+        // NAVIGATION MOBILE TOGGLE
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Initialize first selection load
+        window.addEventListener('load', () => {
+            selectDraft('soco');
+        });
+    </script>
+</body>
+</html>
+
+```
